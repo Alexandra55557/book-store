@@ -15,41 +15,39 @@
 					<a class="nav-link" href="#">Контакты</a>
 				</li> -->
 
-				<li class="catalog">
-					<form class="d-flex" role="catalog">
-					<button class="btn" type="submit">Каталог</button>
+				<form class="d-flex" role="catalog">
+					<router-link class="btn" style="text-decoration: none !important; color: #000" :to="{name: 'catalog'}">Каталог</router-link>
 				</form>
-					
-				<!-- <select name="books" class="form-select">
-					<option selected hidden value="Книги">Каталог товаров</option>
-					<optgroup label="Жанры">
-						<option value="1">Художественная литература</option>
-						<option value="2">Книги для детей</option>
-						<option value="3">Психология</option>
-						<option value="3">Фантастика</option>
-						<option value="3">Наука и техника</option>
-						<option value="3">Искусство</option>
-					</optgroup>
-				</select> -->
-				</li>
+					<!-- <select name="books" class="form-select">
+						<option selected hidden value="Книги">Каталог товаров</option>
+							<optgroup label="Жанры">
+							<option value="1">Художественная литература</option>
+							<option value="2">Книги для детей</option>
+							<option value="3">Психология</option>
+							<option value="3">Фантастика</option>
+							<option value="3">Наука и техника</option>
+							<option value="3">Искусство</option>
+						</optgroup>
+					</select> -->
+			
 				<form class="d-flex" role="search">
 					<input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
 					<button class="btn" type="submit">Поиск</button>
 				</form>
 				<div class="navbar-user">
-					<div class="image">
+					<div class="user">
 						<img src="../assets/icons/icon-user.png" alt="logo">
 						<h1><router-link :to="{name: 'register'}">Вход</router-link></h1>
 					</div>
 					
 
-					<div class="image">
+					<div class="heart">
 						<img src="../assets/icons/icon-heart.png" alt="logo">
 						<h1>Избранное</h1>
 					</div>
 					
 
-					<div class="image">
+					<div class="bag">
 						<img src="../assets/icons/icon-bag.png" alt="logo">
 						<h1>Корзина</h1>
 					</div>
@@ -83,6 +81,7 @@
 	color: black;
 }
 
+
 .d-flex .form-control {
 	margin-left: 25px;
 	width: 500px;
@@ -94,24 +93,37 @@
 
 }
 
+
 .navbar-user {
 	width: 0;
     height: 0; 
 	display: flex; 
 	margin-left: 100px;
+	
 }
 
-.navbar-user img {
-	width: 25px;
-    height: 25px; 
-}
 
 h1 {
 	font-size: 20px;
+	margin-left: 20px;
+	text-decoration: none;
+	
 }
 
-.image {
-	margin-left: 25px;
+.user img {
+	width: 20px;
+	margin-left: 32px;
+	
 }
 
+.heart img {
+	width: 23px;
+	margin-left: 55px;
+
+}
+.bag img {
+	width: 27px;
+	margin-left: 40px;
+	
+}
 </style>
