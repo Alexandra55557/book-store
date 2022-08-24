@@ -1,86 +1,82 @@
 <template>
-    <form action="/action_page.php">
-        <div class="container">
-            <h1>Регистрация</h1>
-            <p>Пожалуйста, заполните данную форму, чтобы создать учетную запись.</p>
-            <hr>
-
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Введите Email" name="email" required>
-
-            <label for="psw"><b>Пароль</b></label>
-            <input type="password" placeholder="Введите пароль" name="psw" required>
-
-            <label for="psw-repeat"><b>Повторите пароль</b></label>
-            <input type="password" placeholder="Повторите пароль" name="psw-repeat" required>
-            <hr>
-            <p>Создавая учетную запись, вы соглашаетесь с нашими <a href="#">условиями и конфиденциальностью</a>.</p>
-
-            <button type="submit" class="registerbtn">Регистрация</button>
-        </div>
-  
-        <div class="container signin">
-            <p>У вас уже есть аккаунт? <a href="#">Войти</a>.</p>
-        </div>
-    </form>
+    <div class="registration-cssave">
+        <form>
+            <h3 class="text-center">Регистрация</h3>
+            <div class="form-group">
+                <p>Введите свой Email</p>
+                <input class="form-control item" type="email" name="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <p>Введите пароль</p>
+                <input class="form-control item" type="password" name="Пароль" id="password" placeholder="Пароль" required>  
+            </div>
+            <div class="form-group">
+                <p>Повторите пароль</p>
+                <input class="form-control item" type="password" name="Повторите Пароль" id="password" placeholder="Повторите Пароль" required>
+            </div>
+           
+            <div class="form-group">
+                <button class="btn btn-primary btn-block create-account" type="submit">Регистрация</button>
+            </div>
+             <div class="form-group">
+                <h1>У Вас уже есть аккаунт? <router-link :to="{name: 'users'}">Войти</router-link></h1> 
+            </div>
+        </form>
+    </div>
 </template>
 
 <style scoped>
-    body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: black;
+  .registration-cssave{
+    padding: 50px 280px;
 }
 
-* {
-    box-sizing: border-box;
-}
-
-.container {
-    padding: 16px;
-    background-color: white;
-}
-
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-}
-
-input[type=text]:focus, input[type=password]:focus {
-    background-color: #ddd;
-    outline: none;
-}
-
-
-hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
-}
-
-.registerbtn {
-    background-color: #EC9B7D;
-    color: white;
-    padding: 16px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    opacity: 0.9;
-}
-
-.registerbtn:hover {
-    opacity: 1;
-}
-
-a {
-    color: dodgerblue;
-}
-
-.signin {
-    background-color: #f1f1f1;
+.form-group p {
+    font-family: italic;
+    font-weight: bold;
+    font-size: 18px;
     text-align: center;
 }
+
+.form-group h1 {
+    font-family: italic;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    float: left;
+    margin-top: -35px;
+    margin-left: 200px;
+}
+
+
+.registration-cssave form {
+  max-width: 800px;
+  padding: 50px 70px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 15px rgba(241, 121, 22, 0.616);
+  background-color:#fff;
+}
+
+.registration-cssave form h3 {
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.registration-cssave .item {
+  border-radius: 10px;
+  margin-bottom: 25px;
+  padding: 10px 20px;
+}
+
+.registration-cssave .create-account {
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: nowrap;
+  background-color:#EC9B7D;
+  border: none;
+  color: black;
+  margin-top: 20px;
+}
+
+
 </style>

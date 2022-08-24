@@ -37,7 +37,7 @@
 				<div class="navbar-user">
 					<div class="user">
 						<img src="../assets/icons/icon-user.png" alt="logo">
-						<h1><router-link :to="{name: 'register'}">Вход</router-link></h1>
+						<h1><router-link :to="{name: 'users'}">Вход</router-link></h1>
 					</div>
 					
 
