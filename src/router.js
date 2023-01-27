@@ -2,7 +2,10 @@ import {createWebHistory, createRouter} from 'vue-router';
 import Home from '@/view/Home';
 import Register from '@/view/Register';
 import Catalog from '@/view/Catalog';
-import Users from '@/view/Users'
+import Users from '@/view/Users';
+import CreatePost from '@/view/CreatePost';
+import Bag from '@/view/Bag';
+import PostContent from '@/view/PostContent';
 
 const routes = [
     {
@@ -24,7 +27,22 @@ const routes = [
         name: 'users',
         path: '/users',
         component: Users,
-    }
+    },
+    {
+        name: 'createPost',
+        path: '/createPost',
+        component: CreatePost,
+    },
+    {
+        name: 'bag',
+        path: '/bag',
+        component: Bag,
+    },
+    {
+        name: 'id',
+        path: '/postContent/:id',
+        component: PostContent,
+    },
 ]
 
 const router = createRouter({

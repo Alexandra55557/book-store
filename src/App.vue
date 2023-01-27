@@ -1,12 +1,8 @@
 <template>
-<div class="screen">
-	<Navbar />
-	
-	<router-view />
-</div>
-
-
-
+	<div class="screen">
+		<Navbar />
+		<router-view />
+	</div>
 </template>
 
 <script>
@@ -23,8 +19,12 @@ export default {
 </script>
 
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-    }
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+	overflow-x: hidden;
+}
 </style>

@@ -1,14 +1,20 @@
 <template>
-    <div class="quote">
-        <div class="image">
-            <img src="../assets/icons/image/tiny-woman.png" alt="logo">
-        </div>
-        <div class="text">
-            <h2>Чтение хороших книг — это разговор с самыми лучшими людьми прошедших времен, и притом такой разговор, когда они сообщают нам только лучшие свои мысли.</h2>
-            <h1>Декарт</h1>
+    <div class="container">
+        <div class="page">
+            <div class="text">
+                <a>Окунись в необыкновынный и <br /> удивительный мир вместе с нами</a>
+            </div>
+            <div class="image">
+                <img src="../assets/icons/home/books1.png" alt="image">
+            </div> 
+            <div class="quote">
+                <a>«Весь мир на <br /> книжной <br /> полке»</a>
+            </div>
         </div>
        
     </div>
+
+    
 </template>
 
 <script>
@@ -16,32 +22,41 @@
 </script>
 
 <style scoped>
-.quote {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+.page { 
+    background-color: #2B4F5A;
+    width: 100%;
+    
 }
 
-.image {
-    display: flex;
-}
-
-.image img {
-    width: 80%;
-}
-
-
-.text h2{
-    font-size: 30px;
-    margin-top: 30px;
-    margin-right: 50px;
-    font-family: italic;   
-}
-
-.text h1 {
+.page .text {
     font-size: 35px;
     font-family: italic;
     font-weight: bold;
+    color: white; 
+    text-align: center;
+   
+}
+
+.page .image {
+    display: flex;
+  
+}
+
+.page .image img {
+    width: 300px;
+}
+
+.quote {
+    display: flex;
+    font-size: 18px;
+    width: 600px;
+}
+
+.quote a {
+    background-color: #A6BFDD;
+    padding: 40px;
+    border-radius: 100%;
+    text-align: center;
 }
 
 </style>

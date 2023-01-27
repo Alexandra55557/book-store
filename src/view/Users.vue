@@ -28,9 +28,9 @@
     max-width: 800px;
     padding: 50px 70px;
     border-radius: 10px;
-    box-shadow: 4px 4px 15px rgba(241, 121, 22, 0.616);
+    box-shadow: 4px 4px 15px #2B4F5A;
     background-color:#fff;
-    }
+}
 
 .registration-cssave form h3 {
     font-weight: bold;
@@ -48,11 +48,9 @@
     padding: 10px 20px;
     font-size: 18px;
     font-weight: nowrap;
-    background-color:#EC9B7D;
+    background-color:#2B4F5A;
     border: none;
-    color: black;
-   
-    
+    color: white;
 }
 
 .form-group p {
